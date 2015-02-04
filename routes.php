@@ -11,7 +11,7 @@ App::before(function ($request) {
         Route::any('flynsarmy/dashboardcachewidget/clear', function() {
             Artisan::call('cache:clear');
 
-            exit('Cache successfully cleared.');
+            return 'Cache successfully cleared.';
         });
     });
 });
