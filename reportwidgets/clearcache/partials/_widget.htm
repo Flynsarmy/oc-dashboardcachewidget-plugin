@@ -1,0 +1,16 @@
+<div class="report-widget">
+    <h3 style="margin-bottom:5px;"><?= e(trans($this->property('title'))) ?></h3>
+
+    <input type="button" class='btn default' value="Clear Cache" onclick="fdcw_clear_cache(this);" />
+    <span id="clearcacheresponse" style="color:green;padding-left:10px"></span>
+    <div style="clear:both;"></div>
+
+    <script>
+        function fdcw_clear_cache( btn )
+        {
+            jQuery(btn).prop('disabled', true).addClass('disabled');
+            jQuery('#clearcacheresponse').html('').load("<?= Backend::url("flynsarmy/dashboardcachewidget/clear"); ?>");
+            jQuery(btn).prop('disabled', false).removeClass('disabled');
+        }
+    </script>
+</div>
