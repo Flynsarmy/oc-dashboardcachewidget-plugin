@@ -1,13 +1,14 @@
-<?php namespace Flynsarmy\DashboardCacheWidget;
+<?php
+
+namespace Flynsarmy\DashboardCacheWidget;
 
 use System\Classes\PluginBase;
 
 /**
- * DashboardCacheWidget Plugin Information File
+ * DashboardCacheWidget Plugin Information File.
  */
 class Plugin extends PluginBase
 {
-
     /**
      * Returns information about this plugin.
      *
@@ -19,7 +20,7 @@ class Plugin extends PluginBase
             'name'        => 'Dashboard Cache Widget',
             'description' => "A simple dashboard widget with a button to clear October's cache.",
             'author'      => 'Flynsarmy',
-            'icon'        => 'icon-remove'
+            'icon'        => 'icon-remove',
         ];
     }
 
@@ -28,7 +29,7 @@ class Plugin extends PluginBase
         return [
             'Flynsarmy\DashboardCacheWidget\ReportWidgets\ClearCache' => [
                 'label'   => 'flynsarmy.dashboardcachewidget::lang.widgets.clearcache.label',
-                'context' => 'dashboard'
+                'context' => 'dashboard',
             ],
         ];
     }

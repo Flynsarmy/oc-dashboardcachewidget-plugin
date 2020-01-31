@@ -1,4 +1,6 @@
-<?php namespace Flynsarmy\DashboardCacheWidget\ReportWidgets;
+<?php
+
+namespace Flynsarmy\DashboardCacheWidget\ReportWidgets;
 
 use Backend\Classes\ReportWidgetBase;
 use Exception;
@@ -9,8 +11,7 @@ class ClearCache extends ReportWidgetBase
     {
         try {
             $this->loadData();
-        }
-        catch (Exception $ex) {
+        } catch (Exception $ex) {
             $this->vars['error'] = $ex->getMessage();
         }
 
@@ -25,13 +26,12 @@ class ClearCache extends ReportWidgetBase
                 'default'           => 'flynsarmy.dashboardcachewidget::lang.widgets.clearcache.label',
                 'type'              => 'string',
                 'validationPattern' => '^.+$',
-                'validationMessage' => 'backend::lang.dashboard.widget_title_error'
+                'validationMessage' => 'backend::lang.dashboard.widget_title_error',
             ],
         ];
     }
 
     protected function loadData()
     {
-
     }
 }
